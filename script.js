@@ -276,9 +276,6 @@
            return 0;
        }
    
-       /*
-          Free delivery for orders of ₦100,000+
-       */
    
        if (subtotal >= 100000) {
            return 0;
@@ -800,8 +797,6 @@
        `;
    
    
-       /* Quantity */
-   
        let quantity = 1;
    
        const quantityDisplay =
@@ -901,8 +896,6 @@
        const cart = getCart();
    
    
-       /* Empty cart */
-   
        if (cart.length === 0) {
    
            cartItems.innerHTML = `
@@ -965,7 +958,6 @@
        }
    
    
-       /* Cart products */
    
        cartItems.innerHTML =
            cart.map(item => `
@@ -1043,8 +1035,7 @@
            `).join("");
    
    
-       /* Increase */
-   
+      
        cartItems
            .querySelectorAll("[data-inc]")
            .forEach(button => {
@@ -1064,9 +1055,7 @@
            });
    
    
-       /* Decrease */
-   
-       cartItems
+        cartItems
            .querySelectorAll("[data-dec]")
            .forEach(button => {
    
@@ -1084,8 +1073,6 @@
    
            });
    
-   
-       /* Remove */
    
        cartItems
            .querySelectorAll("[data-remove]")
@@ -1105,7 +1092,6 @@
            });
    
    
-       /* Summary */
    
        const subtotal =
            getSubtotal();
@@ -1356,7 +1342,6 @@
        }
    
    
-       /* Payment methods */
    
        const paymentInputs =
            document.querySelectorAll(
@@ -1422,8 +1407,7 @@
        });
    
    
-       /* Place order */
-   
+      
        form.addEventListener(
            "submit",
            event => {
@@ -1467,8 +1451,7 @@
                    );
    
    
-               /* Billing validation */
-   
+            
                if (
                    !data.name ||
                    !data.email ||
@@ -1487,8 +1470,7 @@
                }
    
    
-               /* Bank transfer validation */
-   
+            
                if (
                    data.payment === "bank" &&
                    !data.transferReference.trim()
@@ -1503,8 +1485,7 @@
                }
    
    
-               /* Card validation */
-   
+         
                if (data.payment === "card") {
    
                    const cardNumber =
@@ -1529,8 +1510,7 @@
                }
    
    
-               /* Create order number */
-   
+         
                const orderNumber =
                    "LC-" +
                    Date.now()
@@ -1548,8 +1528,7 @@
                    subtotal + delivery;
    
    
-               /* Shipping */
-   
+            
                let shipping;
    
    
@@ -1589,8 +1568,7 @@
                }
    
    
-               /* Order object */
-   
+         
                const order = {
    
                    orderNumber: orderNumber,
@@ -1645,16 +1623,14 @@
                };
    
    
-               /* Save order */
-   
+         
                localStorage.setItem(
                    LAST_ORDER_KEY,
                    JSON.stringify(order)
                );
    
    
-               /* Clear cart */
-   
+            
                localStorage.removeItem(
                    CART_KEY
                );
@@ -1663,8 +1639,7 @@
                updateCartCount();
    
    
-               /* Go to confirmation */
-   
+         
                window.location.href =
                    "order.html";
    
@@ -1857,7 +1832,7 @@
                                <strong>
                                    Account Number:
                                </strong>
-                               0123456789
+                               5673450982
                            </p>
    
                            <p>
