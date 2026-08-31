@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Luxeglow secure checkout.">
+  <title>LuxeGlow | Checkout</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="checkout">
+  <div class="announcement">SECURE CHECKOUT <span>•</span> YOUR INFORMATION IS PROTECTED</div>
+  <header class="site-header"><div class="container header-inner"><a class="logo" href="index.html"><span>L</span>LUXEGLOW</a><div class="secure-label">🔒 Secure checkout</div><a class="cart-link" href="cart.html">🛒 <b id="cartCount">0</b></a></div></header>
+
+  <main><section class="page-hero compact"><div class="container"><p class="eyebrow">FINAL STEP</p><h1>Complete your <em>order.</em></h1></div></section>
+    <section class="section"><div class="container checkout-layout">
+      <form id="checkoutForm" class="checkout-form">
+        <section class="form-card"><div class="form-heading"><span>01</span><div><h2>Billing information</h2><p>Tell us where to send your receipt.</p></div></div>
+          <div class="form-grid"><label>Full name<input name="name" required autocomplete="name" placeholder="Your full name"></label><label>Email address<input name="email" type="email" required autocomplete="email" placeholder="you@example.com"></label><label>Phone number<input name="phone" type="tel" required autocomplete="tel" placeholder="+234 800 000 0000"></label><label>Address<input name="address" required autocomplete="street-address" placeholder="Street address"></label><label>City<input name="city" required autocomplete="address-level2" placeholder="Lagos"></label><label>State<input name="state" required autocomplete="address-level1" placeholder="Lagos State"></label></div>
+        </section>
+
+        <section class="form-card"><div class="form-heading"><span>02</span><div><h2>Shipping information</h2><p>Use a different address if you need delivery elsewhere.</p></div></div>
+          <label class="check-row"><input type="checkbox" id="sameAddress" checked> Shipping address is the same as billing</label>
+          <div id="shippingFields" class="form-grid hidden"><label>Recipient name<input name="shipName"></label><label>Phone<input name="shipPhone" type="tel"></label><label>Address<input name="shipAddress"></label><label>City<input name="shipCity"></label><label>State<input name="shipState"></label></div>
+        </section>
+
+        <section class="form-card"><div class="form-heading"><span>03</span><div><h2>Payment method</h2><p>Choose how you would like to pay.</p></div></div>
+          <div class="payment-options">
+            <label class="payment-option selected"><input type="radio" name="payment" value="bank" checked><span><b>🏦 Bank transfer</b><small>Pay directly to our account. Your order is confirmed after payment reference is submitted.</small></span></label>
+            <label class="payment-option"><input type="radio" name="payment" value="card"><span><b>💳 Card</b><small>Demo card payment interface for this assessment.</small></span></label>
+          </div>
+          <div id="bankDetails" class="bank-box"><div><span>Bank</span><strong>HERITAGE BANK</strong></div><div><span>Account name</span><strong>LuxeGlow Online Store</strong></div><div><span>Account number</span><strong>0123456789</strong></div><div><span>Amount</span><strong id="bankAmount">₦0</strong></div><p>Use your order number as the transfer narration. Then enter your transfer reference below.</p><label>Transfer reference<input name="transferReference" id="transferReference" placeholder="e.g. TRF-123456"></label></div>
+          <div id="cardFields" class="form-grid hidden"><label>Cardholder name<input name="cardName" placeholder="Name on card"></label><label>Card number<input name="cardNumber" inputmode="numeric" maxlength="19" placeholder="0000 0000 0000 0000"></label><label>Expiry<input name="expiry" placeholder="MM/YY"></label><label>CVV<input name="cvv" inputmode="numeric" maxlength="4" placeholder="123"></label></div>
+        </section>
+
+        <div id="checkoutError" class="error-message" role="alert"></div>
+        <button class="btn btn-dark full-btn" type="submit">Place order <span>→</span></button>
+      </form>
+
+      <aside class="summary-card checkout-summary" id="checkoutSummary"></aside>
+    </div></section>
+  </main>
+  <footer><div class="container copyright">© <span id="year"></span> LuxeGlow. Secure checkout.</div></footer>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Browse LuxeGlow products.">
+  <title>LuxeGlow | Shop</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="shop">
+  <div class="announcement">FREE DELIVERY ON ORDERS OVER ₦100,000 <span>•</span> SECURE CHECKOUT</div>
+  <header class="site-header"><div class="container header-inner">
+    <button class="mobile-menu" id="mobileMenu" aria-label="Open menu">☰</button>
+    <a class="logo" href="index.html"><span>L</span>LUXEGLOW</a>
+    <nav class="main-nav" id="mainNav"><a href="index.html">Home</a><a class="active" href="product.html">Shop</a><a href="index.html#about">About</a><a href="index.html#contact">Contact</a></nav>
+    <div class="header-actions"><form class="search" id="searchForm"><input id="searchInput" type="search" placeholder="Search products..." aria-label="Search products"><button type="submit">⌕</button></form><a class="cart-link" href="cart.html">🛒 <b id="cartCount">0</b></a></div>
+  </div></header>
+
+  <main>
+    <section class="page-hero"><div class="container"><p class="eyebrow">THE COLLECTION</p><h1>Shop <em>everything.</em></h1><p>Explore our full collection and add your favourites to the cart.</p></div></section>
+    <section class="section shop-section"><div class="container">
+      <div class="shop-toolbar">
+        <p><span id="productCount">0</span> products</p>
+        <select id="sortSelect" aria-label="Sort products"><option value="featured">Featured</option><option value="low">Price: Low to high</option><option value="high">Price: High to low</option><option value="az">Name: A-Z</option></select>
+      </div>
+      <div class="product-grid" id="productGrid"><div class="loading">Loading products...</div></div>
+    </div></section>
+  </main>
+  <footer><div class="container footer-grid">
+    <div><a class="logo footer-logo" href="index.html"><span>L</span>LUXEGLOW</a><p>Curated shopping for modern living.</p></div>
+    <div><h4>Explore</h4><a href="index.html">Home</a><a href="product.html">Shop</a></div>
+    <div><h4>Contact</h4><a href="mailto:helloluxeglow@gmail.com">helloluxeglow@gmail.com</a><a href="tel:+2348000000000">+234 800 000 0000</a></div>
+    <div><h4>Social</h4><div class="socials"><a href="https://instagram.com" target="_blank" rel="noreferrer">Instagram</a><a href="https://facebook.com" target="_blank" rel="noreferrer">Facebook</a></div></div>
+  </div><div class="container copyright">© <span id="year"></span> LuxeGlow. All rights reserved.</div></footer>
+  <script src="script.js"></script>
+</body>
+</html>
